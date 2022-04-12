@@ -9,6 +9,15 @@
 </head>
 <body>
     <div id="app">
+        <header>
+            <div class="container">
+                <div class="row justify-content-end">
+                    <select @change="filtraDischi" name="genres" id="1">
+                        <option v-for="genere in arrGeneri" :value="genere">{{ genere }}</option>
+                    </select>
+                </div>
+            </div>
+        </header>
         <h1>Dischi di vue</h1>
         <main class="py-3">
             <div class="container">
