@@ -1,6 +1,3 @@
-<?php
-    include __DIR__.'/DB/dischi.php';
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,25 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-    <main class="py-3">
-        <div class="container">
-            <div class="row row-cols-5 gy-2 gx-4">
-                <?php foreach($arr_dischi as $disco) {?>
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <img src="<?= $disco["poster"]?>" alt="<?= $disco["title"]?>" class="card-img-top">
-                                <div class="card-text">
-                                    <h2 class="card-title"><?= $disco["title"]?></h2>
-                                    <p><?= $disco["title"]?></p>
-                                    <p><?= $disco["year"]?></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <?php };?>
-            </div>
-        </div>
-    </main>
+    <?php
+        include __DIR__.'/main-dischi.php';
+    ?>
 </body>
 </html>
