@@ -13,6 +13,7 @@
             <div class="container">
                 <div class="row justify-content-end">
                     <select @change="filtraDischi" name="genres" id="1">
+                        <option value="">All</option>
                         <option v-for="genere in arrGeneri" :value="genere">{{ genere }}</option>
                     </select>
                 </div>

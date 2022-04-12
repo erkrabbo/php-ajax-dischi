@@ -3,17 +3,18 @@ const App = new Vue({
     data: {
         arrDischi: [],
         arrGeneri: [],
-        filtro: '',
+        // filtro: '',
     },
     methods: {
         filtraDischi($event){
-            this.filtro=$event.target.value;
-
+            // this.filtro=$event.target.value;
+            axios.get('../filtro-genere.php?genere=' + $event.target.value)
+                .then(result => this.arrDischi = result.data);
         }
     },
     // computed: {
     //     dischiFiltrati(){
-    //         this.arrDischi.filter(disc => )
+    //        return this.arrDischi.filter(disc => disc.genre.includes(this.filtro));
     //     }
     // },
     created(){
